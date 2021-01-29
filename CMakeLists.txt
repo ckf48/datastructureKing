@@ -3,4 +3,4 @@ project(datastructureKing)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(datastructureKing main.cpp)
+add_executable(datastructureKing main.cpp liner_list/Exercise1.cpp liner_list/Exercise1.h)
