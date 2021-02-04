@@ -1,5 +1,6 @@
 #include <iostream>
 #include "liner_list/Exercise1.h"
+#include "linked_list/Exercise2.h"
 using namespace std;
 
 void test_liner_list_exercise1_1(){
@@ -104,6 +105,80 @@ void test_liner_list_exercise1_13(){
     cout << ret;
 }
 
+void test_linked_list_exercise2_1(){
+    auto *a = new ListNode(1);
+    auto *b = new ListNode(2);
+    auto *c = new ListNode(1);
+    auto *d = new ListNode(1);
+    auto *f = new ListNode(1);
+    a->next = b;
+    b->next = c;
+    c->next = d;
+    d->next = f;
+    f->next = nullptr;
+    Exercise2::exercise1(a,1);
+    ListNode* p = b;
+    while(p != nullptr){
+        cout << p->val << " ";
+        p = p->next;
+    }
+}
+
+void test_linked_list_exercise2_2(){
+    auto *a = new ListNode(10);
+    auto *b = new ListNode(2);
+    auto *c = new ListNode(3);
+    auto *d = new ListNode(4);
+    auto *f = new ListNode(5);
+    a->next = b;
+    b->next = c;
+    c->next = d;
+    d->next = f;
+    f->next = nullptr;
+    Exercise2::exercise2(a);
+
+}
+
+void test_linked_list_exercise2_3(){
+    auto *a = new ListNode(10);
+    auto *b = new ListNode(20);
+    auto *c = new ListNode(30);
+    auto *d = new ListNode(4);
+    auto *f = new ListNode(5);
+    a->next = b;
+    b->next = c;
+    c->next = d;
+    d->next = f;
+    f->next = nullptr;
+    Exercise2::exercise3(a);
+    ListNode* p = a;
+    while(p != nullptr){
+        cout << p->val << " ";
+        p = p->next;
+    }
+
+}
+
+void test_linked_list_exercise2_4(){
+    auto *a = new ListNode(10);
+    auto *b = new ListNode(20);
+    auto *c = new ListNode(30);
+    auto *d = new ListNode(4);
+    auto *f = new ListNode(5);
+    a->next = b;
+    b->next = c;
+    c->next = d;
+    d->next = f;
+    f->next = nullptr;
+    Exercise2::exercise4(a);
+    ListNode* p = f;
+    int count = 5;
+    while(count){
+        cout << p->val << " ";
+        p = p->next;
+        count--;
+    }
+}
 int main() {
     /*1.1*/
     //test_liner_list_exercise1_1();
@@ -142,7 +217,19 @@ int main() {
     //test_liner_list_exercise1_12();
 
     /*1.13*/
-    test_liner_list_exercise1_13();
+    //test_liner_list_exercise1_13();
+
+    /*2.1*/
+    //test_linked_list_exercise2_1();
+
+    /*2.2*/
+    //test_linked_list_exercise2_2();
+
+    /*2.3*/
+    //test_linked_list_exercise2_3();
+
+    /*2.4*/
+    test_linked_list_exercise2_4();
     return 0;
 }
 
